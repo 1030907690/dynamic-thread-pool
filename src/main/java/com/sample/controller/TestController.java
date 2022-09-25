@@ -26,12 +26,12 @@ public class TestController {
         StringBuilder sb = new StringBuilder();
 
         orderThreadPool.execute(() -> {
-            System.out.println("orderThreadPool 执行任务");
+            System.out.println(Thread.currentThread().getName() + " 执行任务");
         });
 
 
         smsThreadPool.execute(() -> {
-            System.out.println("smsThreadPool 执行任务");
+            System.out.println(Thread.currentThread().getName() + " 执行任务");
         });
 
         sb.append("orderThreadPool ");
