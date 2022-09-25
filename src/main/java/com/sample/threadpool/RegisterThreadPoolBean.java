@@ -24,7 +24,7 @@ import java.util.List;
  * @date 2022-09-25 15:09
  */
 @Component
-public class RegisterThreadPool implements BeanDefinitionRegistryPostProcessor, EnvironmentAware {
+public class RegisterThreadPoolBean implements BeanDefinitionRegistryPostProcessor, EnvironmentAware {
 
 
     private Environment environment;
