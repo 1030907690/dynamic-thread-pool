@@ -45,9 +45,10 @@ public class DynamicThreadPoolProperties implements NacosConfigConverter {
         return true;
     }
 
+    // 转换字符串配置为对象
     @Override
     public Object convert(String config) {
-        // 读取配置
+        // 读取配置并转换成对象
 
         YamlPropertiesFactoryBean yaml = new YamlPropertiesFactoryBean();
         yaml.setResources(new ByteArrayResource(config.getBytes(StandardCharsets.UTF_8)));
@@ -62,7 +63,7 @@ public class DynamicThreadPoolProperties implements NacosConfigConverter {
         return dynamicThreadPoolProperties;
     }
 
-    public static class ExecutorProperties{
+    public static class ExecutorProperties {
 
 
         private String name;

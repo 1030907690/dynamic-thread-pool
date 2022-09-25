@@ -19,11 +19,11 @@ import java.util.List;
 /**
  * @author Zhou Zhongqing
  * @ClassName RegisterThreadPool
- * @description: 注册线程池
+ * @description: 注册线程池注册到Spring。这个功能用ImportBeanDefinitionRegistrar接口也是可以的，然后用@Import导入
  * @date 2022-09-25 15:09
  */
 @Component
-public class RegisterThreadPool implements BeanDefinitionRegistryPostProcessor , EnvironmentAware {
+public class RegisterThreadPool implements BeanDefinitionRegistryPostProcessor, EnvironmentAware {
 
 
     private Environment environment;
@@ -50,7 +50,7 @@ public class RegisterThreadPool implements BeanDefinitionRegistryPostProcessor ,
             genericBeanDefinition.getConstructorArgumentValues().addGenericArgumentValue(executorProperty.getName());
             // 注册Bean
             beanDefinitionRegistry.registerBeanDefinition(executorProperty.getName(), genericBeanDefinition);
-            System.out.println("注册 " + executorProperty.getName() + " 线程池" );
+            System.out.println("注册 " + executorProperty.getName() + " 线程池");
         }
 
     }
@@ -62,6 +62,6 @@ public class RegisterThreadPool implements BeanDefinitionRegistryPostProcessor ,
 
     @Override
     public void setEnvironment(Environment environment) {
-     this.environment = environment;
+        this.environment = environment;
     }
 }

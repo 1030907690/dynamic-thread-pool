@@ -37,12 +37,11 @@ public class TestController {
         sb.append("orderThreadPool ");
         sb.append(" 核心线程数 " + orderThreadPool.getCorePoolSize());
         sb.append(" 最大线程数 " + orderThreadPool.getMaxPoolSize());
-        sb.append("\n");
+        sb.append("<br />");
 
         sb.append("smsThreadPool ");
         sb.append(" 核心线程数 " + smsThreadPool.getCorePoolSize());
         sb.append(" 最大线程数 " + smsThreadPool.getMaxPoolSize());
-        sb.append("\n");
 
         return sb.toString();
     }
