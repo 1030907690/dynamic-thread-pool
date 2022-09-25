@@ -19,7 +19,8 @@ import java.util.List;
 /**
  * @author Zhou Zhongqing
  * @ClassName RegisterThreadPool
- * @description: 注册线程池注册到Spring。这个功能用ImportBeanDefinitionRegistrar接口也是可以的，然后用@Import导入
+ * @description: 注册线程池注册到Spring。
+ * 这个功能用ImportBeanDefinitionRegistrar接口也是可以的，然后用@Import导入。可以参考本人拙作 https://sample.blog.csdn.net/article/details/90613661
  * @date 2022-09-25 15:09
  */
 @Component
