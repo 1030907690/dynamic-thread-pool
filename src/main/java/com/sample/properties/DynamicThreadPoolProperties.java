@@ -55,7 +55,6 @@ public class DynamicThreadPoolProperties implements NacosConfigConverter {
 
         DynamicThreadPoolProperties dynamicThreadPoolProperties = new DynamicThreadPoolProperties();
         ConfigurationPropertySource source = new MapConfigurationPropertySource(properties);
-//        Binder binder = Binder.get(environment);
         Binder binder = new Binder(source);
         ResolvableType resolvableType = ResolvableType.forClass(DynamicThreadPoolProperties.class);
         Bindable<Object> objectBindable = Bindable.of(resolvableType).withExistingValue(dynamicThreadPoolProperties);
